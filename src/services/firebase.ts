@@ -1,23 +1,22 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set, get } from 'firebase/database';
 
-// Your Firebase config
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAmKOpeIEnqj3mw5O6BPP6TTCr9BCZzSks",
-    authDomain: "recipe-app-7f923.firebaseapp.com",
-    databaseURL: "https://recipe-app-7f923-default-rtdb.firebaseio.com",
-    projectId: "recipe-app-7f923",
-    storageBucket: "recipe-app-7f923.firebasestorage.app",
-    messagingSenderId: "346831143214",
-    appId: "1:346831143214:web:66b9a78095390f375c3abf",
-    measurementId: "G-HZEEZ689YW"
+  apiKey: "AIzaSyDI_fIWUHYvDZyXXAl8GkLaotqlHuFIFww",
+  authDomain: "recipe-application-a1004.firebaseapp.com",
+  projectId: "recipe-application-a1004",
+  storageBucket: "recipe-application-a1004.firebasestorage.app",
+  messagingSenderId: "194134290308",
+  appId: "1:194134290308:web:3c64e06391ddae635177d1",
+  measurementId: "G-33N0XF8YZ7"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 export const database = getDatabase(app);
 
-// Function to fetch recipes from Firebase
+
 export const getRecipesFromDatabase = async () => {
   try {
     const recipesRef = ref(database, 'recipes'); // Assuming you're storing recipes under 'recipes'
